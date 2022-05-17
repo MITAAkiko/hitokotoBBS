@@ -1,0 +1,96 @@
+body {
+    margin: 20px 160px;   /* 外側の余白 */
+    padding: 0px;      /* 内側の余白 */
+}
+ 
+.msg{
+    margin:20px,10px;
+
+}
+
+hr{
+    margin:10px 0px;
+    border-top: dotted;
+    color:lightslategray;
+    bottom: 0px;
+}
+
+.paging{
+    text-align:center;
+}
+
+.menu{
+    background-color: rgb(68, 71, 80);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight:bold;
+    color:white;
+    font-size: small;
+}
+.submit{
+    background-color: rgb(61, 148, 225);
+    border-radius: 13px;
+    padding: 8px 13px;
+    font-weight:bold;
+    font-size: larger;
+    border:0px;
+    color:white;
+    display: block;
+    margin:auto;
+}
+textarea{
+    display:block;
+    margin:auto;
+    border-color:rgb(183, 196, 209);
+    border-width:3px;
+    border-radius:8px;
+}
+.hello{
+    text-align: center;
+}
+
+.msg_box{
+    position:relative;
+}
+.icon{
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px rgb(136, 141, 154);
+    
+}
+.name{
+    font-size: smaller;
+    font-weight: bold;
+    position:absolute;  left:150px;
+}
+.comment{
+    position:absolute;  top:30px; left:150px;
+    color:rgb(68, 71, 80);
+    width: 550px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 245);
+}
+
+.reply{
+    color:rgb(110, 114, 128);
+}
+
+
+.btn{
+    background-color: rgb(238, 240, 241);
+    border-radius: 10px;
+    padding: 5px 10px;
+    color:gray;
+    font-size: small;
+    float:right;
+    margin-right: 5px;
+}
+
+.day{
+    color:lightslategray;
+    font-size: small;
+}
+
+.error{
+    color: red;
+}
