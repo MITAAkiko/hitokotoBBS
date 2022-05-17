@@ -58,6 +58,8 @@ textarea{
 
 .msg_box{
     position:relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .icon{
     border-radius: 100px;
