@@ -102,7 +102,7 @@ function makeLink($value){
         </dd>
     </dl>
     <div>
-        <input class="submit" type="submit" value="投稿する">
+        <input class="submit" type="submit" value="投稿">
         <br><hr>
     </div>
 </form>

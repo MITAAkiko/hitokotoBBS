@@ -28,13 +28,19 @@ hr{
 .submit{
     background-color: rgb(61, 148, 225);
     border-radius: 13px;
-    padding: 8px 13px;
+    padding: 8px 20px;
     font-weight:bold;
     font-size: larger;
     border:0px;
     color:white;
     display: block;
     margin:auto;
+}
+.submit:hover{
+    cursor: pointer;
+}
+.submit:active{
+    background-color:rgb(50, 124, 190);
 }
 textarea{
     display:block;
