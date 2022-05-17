@@ -1,5 +1,5 @@
 body {
-    background-color: ghostwhite;
+    background-color: rgb(234, 234, 245);
 
 }
 
@@ -7,6 +7,7 @@ main{
     background-color: white;
     margin: 30px 140px;   /* 外側の余白 */
     padding: 40px;      /* 内側の余白 */
+    border-radius: 30px;
 }
 .msg{
     margin:20px,10px;
@@ -32,7 +33,7 @@ hr{
 .submit{
     background-color: rgb(61, 148, 225);
     border-radius: 13px;
-    padding: 8px 20px;
+    padding: 5px 20px;
     font-weight:bold;
     font-size: larger;
     border:0px;
@@ -112,16 +113,19 @@ textarea{
 
 .pgbtn{
     display:inline-block;
-    background-color:lightgray;
+    background-color:rgb(234, 234, 245);
     font-weight: bold;
     border-radius: 30px;
     margin-right: 5px;
-    width:26px;
+    width:24px;
     padding: 5px;
 }
 .nowpage{
-    background-color: gray;
+    background-color: rgb(107, 107, 127);
     color:white;
+}
+.pgbtn:hover{
+    cursor: pointer;
 }
 
 
@@ -139,6 +143,8 @@ textarea{
 }
 dt{
     color:rgb(87, 88, 92);
+    font-size: small;
+    font-weight: bold;
 }
 .join{
     background-color: rgb(111, 174, 47);
@@ -162,4 +168,13 @@ dt{
     display: block;
     transform: translate(100px, 0px);
     
+}
+
+.hover:hover{
+    cursor: pointer;
+}
+
+.sudeni{
+    font-size: smaller;
+    color: dimgrey;
 }

@@ -139,17 +139,17 @@ function makeLink($value){
 <br>
 <div class="paging">
     <?php if($page > 2):  ?>
-    <span class="pgbtn"><a href="index.php?page=1">≪</a></span>
+    <span><a class="pgbtn" href="index.php?page=1">≪</a></span>
     <?php endif; ?>
     <?php if($page > 1):  ?>
-        <span class="pgbtn"><a href="index.php?page=<?php print($page -1); ?>"><?php print($page -1); ?></a></span>
+        <span><a class="pgbtn" href="index.php?page=<?php print($page -1); ?>"><?php print($page -1); ?></a></span>
     <?php endif; ?>
     <span class="pgbtn nowpage"><?php print($page); ?></span>
     <?php if($page < $maxPage): ?>
-        <span class="pgbtn"><a href="index.php?page=<?php print($page + 1); ?>"><?php print($page + 1); ?></a></span>
+        <span><a class="pgbtn" href="index.php?page=<?php print($page + 1); ?>"><?php print($page + 1); ?></a></span>
     <?php endif; ?>
     <?php if($page < $maxPage-1): ?>
-        <span class="pgbtn"><a href="index.php?lastPage">≫</a></span>
+        <span><a class="pgbtn" href="index.php?lastPage">≫</a></span>
     <?php endif; ?>
 </div>
 </main>

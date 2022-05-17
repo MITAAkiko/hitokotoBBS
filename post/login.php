@@ -51,7 +51,7 @@ if(!empty($_POST)){
 
 <div id="lead">
     <h3 class="login_title">ログイン</h3>
-    <p>入会手続きがまだの方　<span><a class="join" href="join/">新規入会</a></span></p>
+    <p class="sudeni">入会手続きがまだの方　<span><a class="join" href="join/">新規入会</a></span></p>
     
 </div>
 <form acrion="" method="post">
@@ -76,8 +76,8 @@ if(!empty($_POST)){
         <?php endif; ?>
         <dt>ログイン情報の記録</dt>
         <dd>
-            <input id="save" type="checkbox" name="save" value="on">
-            <label for="save">次回からは自動ログインする</label>
+            <input class="hover" id="save" type="checkbox" name="save" value="on">
+            <label class="hover" for="save">次回からは自動ログインする</label>
         </dd>
     </dl>
     <div><input class="login_btn" type="submit" value="ログイン"></div>
