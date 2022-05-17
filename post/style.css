@@ -1,8 +1,13 @@
 body {
-    margin: 20px 160px;   /* 外側の余白 */
-    padding: 0px;      /* 内側の余白 */
+    background-color: ghostwhite;
+
 }
- 
+
+main{
+    background-color: white;
+    margin: 20px 140px;   /* 外側の余白 */
+    padding: 40px;      /* 内側の余白 */
+}
 .msg{
     margin:20px,10px;
 
@@ -54,7 +59,7 @@ textarea{
     font-size: small;
     text-align: right;
     color: gray;
-    margin-right: 130px;
+    margin-right: 163px;
 }
 .hello{
     text-align: center;
