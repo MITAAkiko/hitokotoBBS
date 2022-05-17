@@ -47,10 +47,12 @@ if(!empty($_POST)){
 <link rel="stylesheet" href="./style.css">
 </head>
 <main>
+<div class="login_content">
+
 <div id="lead">
-    <p>メールアドレスとパスワードを記入してログインしてください</p>
-    <p>入会手続きがまだの方はこちらからどうぞ</p>
-    <p>&raquo;<a href="join/">入会手続きをする</a></p>
+    <h3 class="login_title">ログイン</h3>
+    <p>入会手続きがまだの方　<span><a class="join" href="join/">新規入会</a></span></p>
+    
 </div>
 <form acrion="" method="post">
     <dl>
@@ -59,12 +61,6 @@ if(!empty($_POST)){
             <input type="text" name="email" size="35" maxlength="255"
              value="<?php if(isset($_POST['email'])){
              echo htmlspecialchars($_POST['email'],ENT_QUOTES);} ?>">
-            <?php if (isset($error['login']) && $error['login'] == 'blank'): ?>
-                <p class="error">※メールアドレスとパスワードをご記入ください</p>
-            <?php endif; ?>
-            <?php if (isset($error['login']) && $error['login'] == 'failed'): ?>
-                <p class="error">※ログインに失敗しました。正しくご記入ください。</p>
-            <?php endif; ?>
         </dd>
         <dt>パスワード</dt>
         <dd>
@@ -72,13 +68,20 @@ if(!empty($_POST)){
              value="<?php if(isset($_POST['password'])){
               echo htmlspecialchars($_POST['password'],ENT_QUOTES); }?>">
         </dd>
+        <?php if (isset($error['login']) && $error['login'] == 'blank'): ?>
+                <p class="error">※メールアドレスとパスワードをご記入ください</p>
+        <?php endif; ?>
+        <?php if (isset($error['login']) && $error['login'] == 'failed'): ?>
+                <p class="error">※ログインに失敗しました。正しくご記入ください。</p>
+        <?php endif; ?>
         <dt>ログイン情報の記録</dt>
         <dd>
             <input id="save" type="checkbox" name="save" value="on">
             <label for="save">次回からは自動ログインする</label>
         </dd>
     </dl>
-    <div><input type="submit" value="ログインする"></div>
+    <div><input class="login_btn" type="submit" value="ログイン"></div>
 </form>
 
+</div>
 </main>

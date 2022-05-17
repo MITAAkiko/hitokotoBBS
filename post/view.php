@@ -24,7 +24,8 @@ $posts->execute(array($_REQUEST['id']));
 </head>
 
 <body>
-			<p><a class="menu" href="index.php">一覧にもどる</a></p>
+	<main>
+			<p><a class="menu" href="index.php">一覧にもどる</a></p><br>
 			<?php if ($post = $posts->fetch()):?>
 			 <div class="msg msg_box">
 			 	<p class="name"><?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?></p>
@@ -38,7 +39,7 @@ $posts->execute(array($_REQUEST['id']));
 			<?php else: ?>
 			 <p>その投稿は削除されたか、URLが間違えています</p>
 			<?php endif; ?>
-
+	</main>
 			
 <!--zoom.js-->
 <script src="../../../jquery-3.6.0.min.js"></script>

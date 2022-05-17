@@ -29,9 +29,14 @@ if(!empty($_POST)){
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="./stylejoin.css">
+<link rel="stylesheet" href="../style.css">
 </head>
+
+<body>
 <main>
+<div class="join_content">
+<h3 class="join_title">登録情報確認</h3>
 
 <form action="" method="post">
     <input type="hidden" name="action" value="submit">
@@ -52,8 +57,10 @@ if(!empty($_POST)){
             width="100" height="100" alt="">
         </dd>
     </dl>
-    <div><a href="index.php?action=rewrite">&laquo;&nbsp;書き直す</a>|
-    <input type="submit" value="登録する"></div>
+    <div><a class="rewrite" href="index.php?action=rewrite">書き直す</a>
+    <input class="checked green_btn" type="submit" value="登録"></div>
 </form>
 
+</div>
 </main>
+</body>

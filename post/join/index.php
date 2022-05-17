@@ -63,8 +63,13 @@ if(!empty($_POST)){
     }
 
     if(!$isError){
-        $image = date('YmdHis').$_FILES['image']['name'];
-        move_uploaded_file($_FILES['image']['tmp_name'],'../member_picture/'.$image);
+        //画像を指定しなかったときの代わりの画像
+        if(empty($fileName)){
+            $image = 'noimage.png';
+        }else{
+            $image = date('YmdHis').$_FILES['image']['name'];
+            move_uploaded_file($_FILES['image']['tmp_name'],'../member_picture/'.$image);
+        }
         $_SESSION['join']=$_POST;
         $_SESSION['join']['image']=$image;
         header('Location:check.php');
@@ -89,11 +94,17 @@ if(isset($_REQUEST['action']) && $_REQUEST['action']==='rewrite'){
     <link rel="stylesheet" href="../style.css">
 
 </head>
+
 <body>
 
 <main>
 
+<div class="join_content">
+<h3 class="join_title">入会登録</h3>
+
 <p>次のフォームに必要事項をご記入ください</p>
+<p class="sudeni">既にアカウントをお持ちの方はこちら <a class="join_login_btn" href="../">ログイン
+</a><p>
 <form action="" method="post" enctype="multipart/form-data">
     <dl>
     <dt>ニックネーム<span class="required">必須</span></dt>
@@ -144,11 +155,12 @@ if(isset($_REQUEST['action']) && $_REQUEST['action']==='rewrite'){
         
     </dd>
     </dl>
-    <div><input type="submit" value="入力内容を確認する"></div>
-    <a href="../">既にアカウントをお持ちの方はこちら≫</a>
+    <div><input class="join_check green_btn" type="submit" value="入力内容を確認"></div>
+    
 
 </form>
 
+</div>
 </main>
 
 

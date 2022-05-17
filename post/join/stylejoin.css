@@ -3,5 +3,75 @@
     font-size:13px;
 }
 dt{
-    color:rgb(87, 88, 92);
+    color:rgb(133, 135, 143);
+    font-size: small;
+    font-weight: bold;
+}
+
+.sudeni{
+    font-size: smaller;
+    color: dimgrey;
+}
+.join_login_btn{
+    background-color: rgb(93, 161, 255);
+    border-radius: 8px;
+    padding: 5px 8px;
+    font-weight:bold;
+    font-size: small;
+    border:0px;
+    color:white;
+    margin:auto;
+    
+}
+
+.join_title{
+    font-size: 28px;
+    color:dimgray
+}
+.join_content{
+    transform: translate(300px, 0px);
+}
+
+.join_check{
+    background-color: rgb(111, 174, 47);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: medium;
+    font-weight:bold;
+    border:0px;
+    color:white;
+    display: inline-block;
+    margin:auto;
+    transform: translate(100px, 0px);
+}
+
+.checked{
+    background-color: rgb(111, 174, 47);
+    border-radius: 8px;
+    padding: 5px 20px;
+    font-size: medium;
+    font-weight:bold;
+    border:0px;
+    color:white;
+    display: inline-block;
+    margin:auto;
+}
+
+.rewrite{
+    background-color: rgb(161, 161, 161);
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: medium;
+    font-weight:bold;
+    border:0px;
+    color:white;
+    display: inline-block;
+    margin:auto;
+}
+
+.green_btn:hover{
+    cursor: pointer;
+}
+.green_btn:active{
+    background-color:rgb(32, 125, 43);
 }

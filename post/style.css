@@ -123,3 +123,43 @@ textarea{
     background-color: gray;
     color:white;
 }
+
+
+.login_title{
+    font-size: 28px;
+    color:dimgray
+}
+.login_content{
+
+    transform: translate(300px, 0px);
+}
+.error{
+    color:red;
+    font-size:13px;
+}
+dt{
+    color:rgb(87, 88, 92);
+}
+.join{
+    background-color: rgb(111, 174, 47);
+    border-radius: 8px;
+    padding: 3px 10px;
+    font-weight:bold;
+    border:0px;
+    color:white;
+    display: inline-block;
+    margin:auto;
+}
+
+.login_btn{
+    background-color: rgb(93, 161, 255);
+    border-radius: 8px;
+    padding: 3px 10px;
+    font-weight:bold;
+    font-size: larger;
+    border:0px;
+    color:white;
+    display: block;
+    transform: translate(100px, 0px);
+    
+}
