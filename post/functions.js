@@ -10,10 +10,13 @@ $(function() {
         },
         function () {
             $(this).stop().animate({
-                'width':'70px',
-                'height':'70px',
+                'width':'80px',
+                'height':'80px',
                 'marginBottom':'0px'
             },'fast');
         }
     );
 });
+function ShowLength( str ) {
+    document.getElementById("inputlength").innerHTML = str.length + "/102文字";
+ }

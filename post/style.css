@@ -12,9 +12,7 @@ hr{
     margin:10px 0px;
     border-top: dotted;
     color:lightslategray;
-    bottom: 0px;
 }
-
 .paging{
     text-align:center;
 }
@@ -44,9 +42,18 @@ textarea{
     border-color:rgb(183, 196, 209);
     border-width:3px;
     border-radius:8px;
+    padding:20px 10px;
+}
+#inputlength{
+    font-size: small;
+    text-align: right;
+    color: gray;
+    margin-right: 130px;
 }
 .hello{
     text-align: center;
+    font-weight: bold;
+    color: rgb(110, 114, 128);
 }
 
 .msg_box{
@@ -91,6 +98,16 @@ textarea{
     font-size: small;
 }
 
-.error{
-    color: red;
+.pgbtn{
+    display:inline-block;
+    background-color:lightgray;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-right: 5px;
+    width:26px;
+    padding: 5px;
+}
+.nowpage{
+    background-color: gray;
+    color:white;
 }

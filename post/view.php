@@ -24,16 +24,15 @@ $posts->execute(array($_REQUEST['id']));
 </head>
 
 <body>
-	<h1>ひとこと掲示板</h1>
-			<p>&laquo;<a href="index.php">一覧にもどる</a></p>
+			<p><a class="menu" href="index.php">一覧にもどる</a></p>
 			<?php if ($post = $posts->fetch()):?>
-			 <div class="msg">
+			 <div class="msg msg_box">
+			 	<p class="name"><?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?></p>
 				<span id="expantion">
 				<img class="icon" src="member_picture/<?php echo htmlspecialchars($post['picture'], ENT_QUOTES); ?>" 
-				 width="48" height="48" alt="<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>" data-action="zoom"/>
+				 width="80" height="80" alt="<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>" data-action="zoom"/>
 				</span>
-				<p class="comment"><?php echo htmlspecialchars($post['message'], ENT_QUOTES);
-				?><span class="name">（<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>）</span></p>
+				<p class="comment"><?php echo htmlspecialchars($post['message'], ENT_QUOTES);?></p>
 				<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
 			 </div>
 			<?php else: ?>
@@ -45,6 +44,6 @@ $posts->execute(array($_REQUEST['id']));
 <script src="../../../jquery-3.6.0.min.js"></script>
 <script src="../zoom.js" type="text/javascript"></script>
 <!--expantion-->
-<script type="text/javascript" src="./img_functon.js"></script>
+<script type="text/javascript" src="./functions.js"></script>
 </body>
 </html>

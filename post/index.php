@@ -25,12 +25,7 @@ if(!empty($_POST)){
         header('Location:index.php');exit();
     }
 }
-//投稿が102文字以上の時エラーメッセージ
-if(!empty($_POST)){
-    if(strlen($_POST['message'])>102){
-        $error['message']='long';
-    }
-}
+
 //投稿を取得する
 //isetないと$page定義されておらずエラー表示
 if(!empty($_GET['page'])){
@@ -96,16 +91,10 @@ function makeLink($value){
 <form action="" method="post">
     <dl>
         <dt class="hello"><?php echo h($member['name']); ?>さん、メッセージをどうぞ</dt>
-        <dd><textarea name="message" cols="80" rows="5" maxlength="255"
-        value="<?php echo h($_POST['message']);?>"><?php 
-            if(isset($message)){ echo h($message) ;}?></textarea>
-
-            <!--エラーメッセージを表示する -->
-            <?php if ($error['message']==='long'): ?>
-            <p class="error">※102文字以内で送信してください<span><?php
-            echo strlen($_POST['message']); ?></p>
-            <?php endif; ?>
-
+        <dd><textarea name="message" cols="80" rows="3" maxlength="102"
+                onkeyup="ShowLength(value);"><?php 
+                if(isset($message)){ echo h($message) ;}?></textarea>
+            <p id="inputlength">0/102文字</p>
             <?php if(isset($_GET['res'])): ?>
                 <input type="hidden" name="reply_post_id" maxlength="100"
                 value="<?php echo h($_GET['res']);?>">
@@ -127,7 +116,7 @@ function makeLink($value){
             </span>
             <span class="name"><?php echo h($post['name']);?></span>
             <!--返信機能-->
-            <a class="btn" href="index.php?res=<?php echo h($post['id']);?>">Re</a>
+            <a class="btn" href="index.php?res=<?php echo h($post['id']);?>">返信</a>
             <!--返信元-->
             <?php if($post['reply_post_id'] !== NULL): ?>
                 <a class="btn" href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
@@ -135,37 +124,32 @@ function makeLink($value){
             <!--メッセージ-->
             <span class="comment"><?php echo makeLink(h($post['message']));?>
             </span>
-
             <p class="day">
                 <?php echo h($post['created']);?>    
-                <?php if($_SESSION['id']==$post['member_id']): ?>
-                    <a class="btn" href="delete.php?id=<?php echo h($post['id']);?>" style="color:#F33;" onclick="return cfm()">削除</a>
-                <?php endif; ?>
-                <a class="btn" href="view.php?id=<?php echo h($post['id']); ?>">詳細</a>
+                <?php  if($_SESSION['id']==$post['member_id']): ?>
+                <a class="btn" href="delete.php?id=<?php  echo h($post['id']);?>" style="color:#F33;" onclick="return cfm()">削除</a>
+                <?php  endif; ?>
+                <a class="btn" href="view.php?id=<?php  echo h($post['id']); ?>">詳細</a>
             </p>
             <hr>
         </div>
     </div>
     
 <?php endforeach; ?>
-
+<br>
 <div class="paging">
     <?php if($page > 2):  ?>
-    <span><a href="index.php?page=1"> ≪ </a></span>|
+    <span class="pgbtn"><a href="index.php?page=1">≪</a></span>
     <?php endif; ?>
     <?php if($page > 1):  ?>
-        <span><a href="index.php?page=<?php print($page -1); ?>"> <?php print($page -1); ?> </a></span>
-    <?php else: ?>
-        <span></span>
+        <span class="pgbtn"><a href="index.php?page=<?php print($page -1); ?>"><?php print($page -1); ?></a></span>
     <?php endif; ?>
-    | <?php print($page); ?> |
+    <span class="pgbtn nowpage"><?php print($page); ?></span>
     <?php if($page < $maxPage): ?>
-        <span><a href="index.php?page=<?php print($page + 1); ?>"> <?php print($page + 1); ?> </a></span>
-    <?php else: ?>
-        <span></span>
+        <span class="pgbtn"><a href="index.php?page=<?php print($page + 1); ?>"><?php print($page + 1); ?></a></span>
     <?php endif; ?>
     <?php if($page < $maxPage-1): ?>
-    |<span><a href="index.php?lastPage"> ≫ </a></span>
+        <span class="pgbtn"><a href="index.php?lastPage">≫</a></span>
     <?php endif; ?>
 </div>
 </main>
@@ -180,7 +164,7 @@ function makeLink($value){
 <script src="../../../jquery-3.6.0.min.js"></script>
 <script src="../zoom.js" type="text/javascript"></script>
 <!--expantion-->
-<script type="text/javascript" src="./img_functon.js"></script>
+<script type="text/javascript" src="./functions.js"></script>
 </body>
-
+//
 </html>
