@@ -23,12 +23,19 @@ hr{
 }
 
 .menu{
-    background-color: rgb(68, 71, 80);
+    background-color: rgb(119, 130, 161);
     border-radius: 10px;
     padding: 5px 10px;
     font-weight:bold;
     color:white;
     font-size: small;
+    display:inline-block;
+    margin-bottom: 5px;
+}
+.logout{
+    display:block;
+    margin:auto;
+    float:right;
 }
 .submit{
     background-color: rgb(61, 148, 225);

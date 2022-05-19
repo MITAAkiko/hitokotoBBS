@@ -86,7 +86,10 @@ function makeLink($value){
 
 <body>
 <main>
-<div  style="text-align:right"><a class="menu" href="logout.php">ログアウト</a></div>
+    <!-- マイページのインクつくり-->
+<a class="menu" href="mypage/?mypage=<?php echo h($_SESSION['id'])?>" >マイページ</a>
+<a class="menu logout" href="logout.php">ログアウト</a>
+
 
 <form action="" method="post">
     <dl>
